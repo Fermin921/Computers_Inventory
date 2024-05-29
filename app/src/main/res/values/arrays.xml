@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_options">
+        <item>Selecciona un tipo</item>
+        <item>All in One</item>
+        <item>Laptop</item>
+        <item>Desktop</item>
+    </string-array>
+</resources>
