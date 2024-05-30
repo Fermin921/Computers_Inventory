@@ -6,9 +6,23 @@
     android:layout_height="match_parent"
     android:background="@color/Purple"
     android:backgroundTint="@color/Purple"
-    tools:context=".YourActivity">
+    >
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
@@ -29,6 +43,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <Button
+                    android:id="@+id/btnEditar"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="138dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Editar"
+                    android:textColor="@color/Purple"
+                    app:icon="@drawable/edit_24px"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Eliminar"
+                    android:textColor="@color/Purple"
+                    app:icon="@drawable/delete"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
                 <TextView
                     android:id="@+id/tvModel"
                     android:layout_width="wrap_content"
@@ -47,7 +87,20 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvModel"
+                    app:srcCompat="@drawable/ic_launcher_background"
                     tools:srcCompat="@tools:sample/avatars" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="376dp"
+                    android:layout_height="373dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.038"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Tabs"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="NotSibling" />
 
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/Tabs"
@@ -85,13 +138,19 @@
                         android:text="Wednesday" />
                 </com.google.android.material.tabs.TabLayout>
 
-                <TextView
-                    android:id="@+id/textView3"
+                <Button
+                    android:id="@+id/btnReturn"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
-                    tools:layout_editor_absoluteX="33dp"
-                    tools:layout_editor_absoluteY="288dp" />
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Regresar"
+                    android:textColor="@color/Purple"
+                    app:icon="@drawable/keyboard_return_24px"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
